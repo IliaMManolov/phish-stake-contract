@@ -139,7 +139,7 @@ MIT License
    ```
 5. **Verify Integration**: Check deployed contracts on [Zircuit Testnet Explorer](https://explorer.testnet.zircuit.com/)
 
-**Zircuit Development Experience**: It was a bit rough to deploy everything, in all honesty. Really wish there were some end-to-end examples of how to do it but we managed somehow.
+**Zircuit Development Experience**: Figuring out how to get the faucets working and the correct RPC endpoints was a challenge but everything from that point on was smooth sailing. The explorer was very useful for evaluating how things worked.
 
 **Demo**: [Placeholder] - Video demonstration showcasing the complete staking workflow, admin functions, and Zircuit integration available at [demo-link].
 
