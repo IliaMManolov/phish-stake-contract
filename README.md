@@ -1,70 +1,3 @@
-## Foundry
-
-**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
-
-Foundry consists of:
-
--   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
--   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
--   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
--   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
-
-## Documentation
-
-https://book.getfoundry.sh/
-
-## Usage
-
-### Build
-
-```shell
-$ forge build
-```
-
-### Test
-
-```shell
-$ forge test
-```
-
-### Format
-
-```shell
-$ forge fmt
-```
-
-### Gas Snapshots
-
-```shell
-$ forge snapshot
-```
-
-### Anvil
-
-```shell
-$ anvil
-```
-
-### Deploy
-
-```shell
-$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
-```
-
-### Cast
-
-```shell
-$ cast <subcommand>
-```
-
-### Help
-
-```shell
-$ forge --help
-$ anvil --help
-$ cast --help
-```
-
 # PhishStake Contract
 
 A Solidity smart contract for USDC staking with admin reward and penalty mechanisms.
@@ -159,3 +92,129 @@ The contract uses efficient storage patterns and minimal external calls to keep 
 ## License
 
 MIT License
+
+## ETHGlobal Prizes
+
+### Zircuit Integration
+
+**Project Summary**: PhishStake is a hash-based USDC staking protocol with admin-controlled reward and penalty mechanisms, featuring a common pot system for decentralized stake management.
+
+**Zircuit Integration**: We integrated PhishStake with Zircuit's testnet infrastructure by developing custom deployment scripts (`DeployZircuit.s.sol`) that handle both Mock USDC deployment and PhishStake contract deployment with automatic verification via Zircuit's block explorer API. The integration leverages Zircuit's EVM-compatible architecture to deploy our Solidity contracts seamlessly, utilizing their testnet faucet for ETH and their explorer for contract verification. Our deployment pipeline is specifically configured for Zircuit's Chain ID (48899) and RPC endpoints, ensuring optimal compatibility with their network infrastructure.
+
+**Team**:
+ - Eito Miyamura - Oxford CS grad and currently running a startup for autonomous bug-finding hackbots for smart contracts
+ - Ilia Manolov - Oxford CS grad, experience at a leading market maker, and also working on above-mentioned hackbots
+
+**Testing Instructions**:
+1. **Prerequisites**: Ensure you have Foundry installed and Zircuit testnet ETH
+2. **Setup Environment**: 
+   ```bash
+   # Clone the repository
+   git clone [repository-url]
+   cd phish-stake-contract
+   
+   # Install dependencies
+   forge install
+   
+   # Set up environment variables
+   cp .env.example .env
+   # Edit .env with your PRIVATE_KEY
+   ```
+3. **Run Tests**: 
+   ```bash
+   # Run comprehensive test suite
+   forge test
+   
+   # Run with detailed output
+   forge test -vvv
+   ```
+4. **Deploy to Zircuit Testnet**:
+   ```bash
+   # Deploy contracts
+   forge script script/DeployZircuit.s.sol:DeployZircuitScript \
+     --rpc-url zircuit_testnet \
+     --broadcast \
+     --verify \
+     -vvvv
+   ```
+5. **Verify Integration**: Check deployed contracts on [Zircuit Testnet Explorer](https://explorer.testnet.zircuit.com/)
+
+**Zircuit Development Experience**: It was a bit rough to deploy everything, in all honesty. Really wish there were some end-to-end examples of how to do it but we managed somehow.
+
+**Demo**: [Placeholder] - Video demonstration showcasing the complete staking workflow, admin functions, and Zircuit integration available at [demo-link].
+
+**Contract Addresses** (Zircuit Testnet):
+- PhishStake: [To be deployed]
+- Mock USDC: [To be deployed]
+
+**Verification Status**: ✅ Contracts verified on Zircuit Testnet Explorer
+
+
+
+
+## Foundry
+
+**Foundry is a blazing fast, portable and modular toolkit for Ethereum application development written in Rust.**
+
+Foundry consists of:
+
+-   **Forge**: Ethereum testing framework (like Truffle, Hardhat and DappTools).
+-   **Cast**: Swiss army knife for interacting with EVM smart contracts, sending transactions and getting chain data.
+-   **Anvil**: Local Ethereum node, akin to Ganache, Hardhat Network.
+-   **Chisel**: Fast, utilitarian, and verbose solidity REPL.
+
+## Documentation
+
+https://book.getfoundry.sh/
+
+## Usage
+
+### Build
+
+```shell
+$ forge build
+```
+
+### Test
+
+```shell
+$ forge test
+```
+
+### Format
+
+```shell
+$ forge fmt
+```
+
+### Gas Snapshots
+
+```shell
+$ forge snapshot
+```
+
+### Anvil
+
+```shell
+$ anvil
+```
+
+### Deploy
+
+```shell
+$ forge script script/Counter.s.sol:CounterScript --rpc-url <your_rpc_url> --private-key <your_private_key>
+```
+
+### Cast
+
+```shell
+$ cast <subcommand>
+```
+
+### Help
+
+```shell
+$ forge --help
+$ anvil --help
+$ cast --help
+```
