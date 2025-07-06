@@ -144,8 +144,9 @@ MIT License
 **Demo**: [Placeholder] - Video demonstration showcasing the complete staking workflow, admin functions, and Zircuit integration available at [demo-link].
 
 **Contract Addresses** (Zircuit Testnet):
-- PhishStake: [To be deployed]
-- Mock USDC: [To be deployed]
+- **MockUSDC**: `0xdb03e54a4db2ecaa40b554110e28091f3361d251`
+- **PhishStake**: `0x5dc86ea7b0fdf8940fc73c56641c77fba5227c72`
+
 
 **Verification Status**: ✅ Contracts verified on Zircuit Testnet Explorer
 

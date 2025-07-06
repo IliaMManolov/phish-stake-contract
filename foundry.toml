@@ -7,7 +7,7 @@ libs = ["lib"]
 
 # Zircuit Testnet Configuration
 [rpc_endpoints]
-zircuit_testnet = "https://testnet.zircuit.com"
+zircuit_testnet = "https://garfield-testnet.zircuit.com"
 
 [etherscan]
 zircuit_testnet = { key = "${ZIRCUIT_API_KEY}", url = "https://explorer.testnet.zircuit.com/api/contractVerifyHardhat", chain = 48899 }
