@@ -4,3 +4,10 @@ out = "out"
 libs = ["lib"]
 
 # See more config options https://github.com/foundry-rs/foundry/blob/master/crates/config/README.md#all-options
+
+# Zircuit Testnet Configuration
+[rpc_endpoints]
+zircuit_testnet = "https://testnet.zircuit.com"
+
+[etherscan]
+zircuit_testnet = { key = "${ZIRCUIT_API_KEY}", url = "https://explorer.testnet.zircuit.com/api/contractVerifyHardhat", chain = 48899 }
