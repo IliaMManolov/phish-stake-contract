@@ -141,7 +141,7 @@ MIT License
 
 **Zircuit Development Experience**: Figuring out how to get the faucets working and the correct RPC endpoints was a challenge but everything from that point on was smooth sailing. The explorer was very useful for evaluating how things worked.
 
-**Demo**: [Placeholder] - Video demonstration showcasing the complete staking workflow, admin functions, and Zircuit integration available at [demo-link].
+**Demo**: - Video demonstration showcasing the complete staking workflow, admin functions, and Zircuit integration available at [demo](https://youtu.be/rQ1O7q0SGu4).
 
 **Contract Addresses** (Zircuit Testnet):
 - **MockUSDC**: `0xdb03e54a4db2ecaa40b554110e28091f3361d251`
@@ -149,7 +149,6 @@ MIT License
 
 
 **Verification Status**: ✅ Contracts verified on Zircuit Testnet Explorer
-
 
 
 
